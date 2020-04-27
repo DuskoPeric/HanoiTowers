@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hanoi Towers</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-content">
+      <div class="first-screen">
+        <h1>Hanoi towers</h1>
+        <div>
+          <h2>Choose number of disks</h2>
+          <div class="disks">
+            <button class="disk active" data-nodisk="3">3</button>
+            <button class="disk" data-nodisk="4">4</button>
+            <button class="disk" data-nodisk="5">5</button>
+            <button class="disk" data-nodisk="6">6</button>
+            <button class="disk" data-nodisk="7">7</button>
+            <button class="disk" data-nodisk="8">8</button>
+            <button class="disk" data-nodisk="9">9</button>
+          </div>
+        </div>
+        <button id="start">Start</button>
+      </div>
+      <div class="win">
+        <h2>Well done!</h2>
+        <p class="moves">You finish in <span>7</span> moves</p>
+        <button id="newgame">New game</button>
+      </div>
+      <div class="game">
+        <div class="towers"></div>
+        <div class="actionBtns">
+          <div>
+            <button id="b0" onclick="switchBlock(0)">I</button>
+          </div>
+          <div>
+            <button id="b1" onclick="switchBlock(1)">II</button>
+          </div>
+          <div>
+            <button id="b2" onclick="switchBlock(2)">III</button>
+          </div>
+        </div>
+        <div class="score">
+          <div class="moves">
+            <p>Moves</p>
+            <p id="moves">0</p>
+          </div>
+          <button id="restart">Restart</button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
